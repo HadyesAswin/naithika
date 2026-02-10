@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <!-- Favicon link -->
+    <link rel="icon" type="image/webp" href="images_naithika/logo.webp">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/naithika_style.css">
+    <link rel="stylesheet" href="static/naithika_about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+
+<style>
+    /* ===============================
+   NAITHIKA – WHATSAPP FLOAT BUTTON
+   =============================== */
+
+.naithika-whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 60px;
+
+    width: 56px;
+    height: 56px;
+
+    background-color: #25D366;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+
+    text-decoration: none;
+}
+
+.naithika-whatsapp-float svg {
+    width: 26px;
+    height: 26px;
+    fill: #ffffff;
+}
+
+/* Hover (desktop only) */
+@media (hover: hover) {
+    .naithika-whatsapp-float:hover {
+        transform: scale(1.06);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+    }
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+    .naithika-whatsapp-float {
+        width: 50px;
+        height: 50px;
+        right: 16px;
+        bottom: 25px;
+    }
+
+    .naithika-whatsapp-float svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+    <!-- Header -->
+     <header id="header_top_bar">
+        <div class="header_container">
+            
+            <div name="header_promo_message" class="header_promo_message">
+                WORLDWIDE SHIPPING AVAILABLE | FREE SHIPPING WITHIN INDIA ON ORDERS ABOVE RS. 999
+            </div>
+
+            <div name="header_secondary_links" class="header_secondary_links">
+                <a href="contact.html">
+                    <svg class="header_contact_icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    CONTACT US
+                </a>
+                <a href="#" class="header_faq_link">+91 8106025114</a>
+                <a href="offer.html">SPECIAL OFFERS</a>
+                <span class="header_divider">|</span>
+            </div>
+        </div>
+    </header>
+
+      <div id="header_main_content">
+    <div class="header_container">
+
+        <a href="/">
+            <img id="header_logo_image" 
+                 src="images_naithika/Naithika_Logo.webp" 
+                 alt="Naithika Logo"
+                 style="width: 80px; height: auto;">
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+        <nav id="header_nav">
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="about.html" class="nav-link">ABOUT US</a>
+
+            <!-- PRODUCTS DROPDOWN (DESKTOP ONLY) -->
+            <div class="header_dropdown_group">
+                <a href="#" class="nav-link header_dropdown_toggle">
+                    PRODUCTS
+                    <svg class="header_dropdown_arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+
+                <div class="header_dropdown_menu">
+                    <a href="products.html" class="dropdown-item">All Products</a>
+                    <a href="dehydrated_fruits.html" class="dropdown-item">Fruit Leather</a>
+                    <a href="dehydrated_vegetables.html" class="dropdown-item">Dehydrated Vegetables</a>
+                    <a href="pickles_and_powders.html" class="dropdown-item">Pickles & Powders</a>
+                    <a href="herbal_tea.html" class="dropdown-item">Herbal Teas</a>
+                </div>
+            </div>
+
+            <a href="offer.html" class="nav-link">OFFERS</a>
+            <a href="contact.html" class="nav-link">CONTACT US</a>
+        </nav>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button name="header_mobile_menu_toggle" class="header_mobile_menu_toggle">
+            <svg class="header_mobile_menu_toggle_icon" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
+    </div>
+</div>
+
+<!-- MOBILE MENU -->
+<div name="header_mobile_menu" class="header_mobile_menu">
+    <div class="header_nav_list">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="about.html" class="nav-link">ABOUT US</a>
+        <a href="offer.html" class="nav-link">OFFERS</a>
+
+        <!-- MOBILE PRODUCTS CATEGORY HEADING -->
+        <span class="mobile_category_heading">PRODUCTS</span>
+        <a href="products.html" class="mobile-sub-item">All Products</a>
+        <a href="dehydrated_fruits.html" class="mobile-sub-item">Fruit Leather</a>
+        <a href="dehydrated_vegetables.html" class="mobile-sub-item">Dehydrated Vegetables</a>
+        <a href="pickles_and_powders.html" class="mobile-sub-item">Pickles & Powders</a>
+        <a href="herbal_tea.html" class="mobile-sub-item">Herbal Teas</a>
+
+        <a href="contact.html" class="nav-link">CONTACT US</a>
+    </div>
+</div>
+
+
+    <div class="product-container">
+        <h2 id="product-dehydrated-fruits" class="product-section-heading" style="color: #e97b06;">Dehydrated Fruits & Leathers</h2>
+        <div class="product-grid">
+
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-card-front">
+                        <div class="product-image-container">
+                            <img src="images_naithika/products_new/mango.webp" alt="Dehydrated Mango Slices" onerror="this.onerror=null; this.src='https://placehold.co/400x200/a65e5e/ffffff?text=Mango+Dehydrated'">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Mango</h3>
+                            <div class="product-short-description-container">
+                                <span class="product-short-description-text"></span>
+                                <a href="#" class="product-more-link" style="color: #e97b06;">...more</a>
+                                <a href="#" class="product-less-link-mob" style="color: #e97b06;">...less</a>
+                            </div>
+                            <p class="product-price" style="color: #e97b06;">₹250/100g</p>
+                        </div>
+                        <div class="product-buy-button-container" >
+                            <button class="product-buy-button product-front-buy-button" onclick="redirectToWhatsApp('Mango')" style="background-color: #e97b06;">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card-back">
+                        <div class="product-full-content">
+                            <h4 style="color: #e97b06;">Full Details: Mango</h4>
+                            <p>Sun-ripened mangoes from partner orchards, gently dried to preserve natural sweetness and aroma. No added sugars - just concentrated mango goodness. Perfect for snacking, baking, or adding to morning bowls.</p>
+                            <h5 class="product-nutrition-heading">Nutritional Value (Per 100g)</h5>
+                            <ul class="product-nutrition-list">
+                                <li>Energy: 320 kcal</li>
+                                <li>Carbs: 78 g</li>
+                                <li>Protein: 2.9 g</li>
+                                <li>Fiber: 8 g</li>
+                                <li>Vitamin A & C: High</li>
+                            </ul>
+                            <p class="product-price-back" style="color: #e97b06;">Price: ₹250/100g</p>
+                        </div>
+                        <div class="product-back-action-container">
+                           <a href="#" class="product-less-link" style="color: #e97b06;">...less</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-card-front">
+                        <div class="product-image-container">
+                            <img src="realimages/chikku.jpeg" alt="Dehydrated Chikku Slices" onerror="this.onerror=null; this.src='https://placehold.co/400x200/a65e5e/ffffff?text=Chikku'">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Chikku (Sapota)</h3>
+                            <div class="product-short-description-container">
+                                <span class="product-short-description-text"></span>
+                                <a href="#" class="product-more-link" style="color: #e97b06;">...more</a>
+                                <a href="#" class="product-less-link-mob" style="color: #e97b06;">...less</a>
+                            </div>
+                            <p class="product-price" style="color: #e97b06;">₹250/100g</p>
+                        </div>
+                        <div class="product-buy-button-container" >
+                            <button class="product-buy-button product-front-buy-button" onclick="redirectToWhatsApp('Chikku (Sapota)')" style="background-color: #e97b06;" >Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card-back">
+                        <div class="product-full-content">
+                            <h4 style="color: #e97b06;">Full Details: Chikku (Sapota)</h4>
+                            <p>Caramel-like sweetness in every slice. Harvested from local orchards and gently dehydrated to keep texture soft and flavour rounded. A comforting, fibre-rich snack for any time.</p>
+                            <h5 class="product-nutrition-heading">Nutritional Value (Per 100g)</h5>
+                            <ul class="product-nutrition-list">
+                                <li>Energy: 340 kcal</li>
+                                <li>Carbs: 80 g</li>
+                                <li>Fiber: 9 g</li>
+                                <li>Vitamin A: Moderate</li>
+                                <li>Iron: Trace</li>
+                            </ul>
+                            <p class="product-price-back" style="color: #e97b06;">Price: ₹250/100g</p>
+                        </div>
+                        <div class="product-back-action-container">
+                           <a href="#" class="product-less-link" style="color: #e97b06;">...less</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-card-front">
+                        <div class="product-image-container">
+                            <img src="images_naithika/products_new/jamun.jpg" alt="Dehydrated Jamun Slices" onerror="this.onerror=null; this.src='https://placehold.co/400x200/a65e5e/ffffff?text=Jamun+Dehydrated'">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Jamun</h3>
+                            <div class="product-short-description-container">
+                                <span class="product-short-description-text"></span>
+                                <a href="#" class="product-more-link" style="color: #e97b06;">...more</a>
+                                <a href="#" class="product-less-link-mob" style="color: #e97b06;">...less</a>
+                            </div>
+                            <p class="product-price" style="color: #e97b06;">₹280/100g</p>
+                        </div>
+                        <div class="product-buy-button-container">
+                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Jamun')">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card-back">
+                        <div class="product-full-content">
+                            <h4 style="color: #e97b06;">Full Details: Jamun</h4>
+                            <p>Deep-purple jamun slices capturing the tangy-sweet character of native trees. Known in India for traditional benefits linked to wellness. Use in smoothies, herbal blends, or as a unique, healthy snack.</p>
+                            <h5 class="product-nutrition-heading">Nutritional Value (Per 100g)</h5>
+                            <ul class="product-nutrition-list">
+                                <li>Energy: 320 kcal</li>
+                                <li>Carbs: 75 g</li>
+                                <li>Fiber: 10 g</li>
+                                <li>Vitamin C: High</li>
+                                <li>Antioxidants: Rich</li>
+                            </ul>
+                            <p class="product-price-back" style="color: #e97b06;">Price: ₹280/100g</p>
+                        </div>
+                        <div class="product-back-action-container">
+                           <a href="#" class="product-less-link" style="color: #e97b06;">...less</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-card-front">
+                        <div class="product-image-container">
+                            <img src="realimages/pineapple2.jpeg" alt="Dehydrated Pineapple" onerror="this.onerror=null; this.src='https://placehold.co/400x200/a65e5e/ffffff?text=Pineapple+Dehydrated'">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Pineapple</h3>
+                            <div class="product-short-description-container">
+                                <span class="product-short-description-text"></span>
+                                <a href="#" class="product-more-link" style="color: #e97b06;">...more</a>
+                                <a href="#" class="product-less-link-mob" style="color: #e97b06;">...less</a>
+                            </div>
+                            <p class="product-price" style="color: #e97b06;">₹250/100g</p>
+                        </div>
+                        <div class="product-buy-button-container">
+                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Pineapple')">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card-back">
+                        <div class="product-full-content">
+                            <h4 style="color: #e97b06;">Full Details: Pineapple</h4>
+                            <p>Golden rings from handpicked, ripe fruit. Our drying process keeps nutrients intact while concentrating tropical sweetness. Bright tang and soft chew - perfect for snacking or baking.</p>
+                            <h5 class="product-nutrition-heading">Nutritional Value (Per 100g)</h5>
+                            <ul class="product-nutrition-list">
+                                <li>Energy: 310 kcal</li>
+                                <li>Carbs: 72 g</li>
+                                <li>Vitamin C: High</li>
+                                <li>Fiber: 9 g</li>
+                            </ul>
+                            <p class="product-price-back" style="color: #e97b06;">Price: ₹250/100g</p>
+                        </div>
+                        <div class="product-back-action-container">
+                           <a href="#" class="product-less-link" style="color: #e97b06;">...less</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-card-front">
+                        <div class="product-image-container">
+                            <img src="realimages/apple.jpeg" alt="Dehydrated Apple Slices" onerror="this.onerror=null; this.src='https://placehold.co/400x200/a65e5e/ffffff?text=Apple+Dehydrated'">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Apple</h3>
+                            <div class="product-short-description-container">
+                                <span class="product-short-description-text"></span>
+                                <a href="#" class="product-more-link" style="color: #e97b06;">...more</a>
+                                <a href="#" class="product-less-link-mob" style="color: #e97b06;">...less</a>
+                            </div>
+                            <p class="product-price" style="color: #e97b06;">₹250/100g</p>
+                        </div>
+                        <div class="product-buy-button-container">
+                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Apple')">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card-back">
+                        <div class="product-full-content">
+                            <h4 style="color: #e97b06;">Full Details: Apple</h4>
+                            <p>Thin, crisp slices from seasonal Indian orchards. Gently dehydrated to maintain light crunch and natural sweetness. No glazing, no added sugar - just pure fruit character.</p>
+                            <h5 class="product-nutrition-heading">Nutritional Value (Per 100g)</h5>
+                            <ul class="product-nutrition-list">
+                                <li>Energy: 290 kcal</li>
+                                <li>Carbs: 70 g</li>
+                                <li>Fiber: 8 g</li>
+                                <li>Vitamin C: Moderate</li>
+                            </ul>
+                            <p class="product-price-back" style="color: #e97b06;">Price: ₹250/100g</p>
+                        </div>
+                        <div class="product-back-action-container">
+                           <a href="#" class="product-less-link" style="color: #e97b06;">...less</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-card-front">
+                        <div class="product-image-container">
+                            <img src="images_naithika/products_new/guava.jpg" alt="Dehydrated Guava Slices" onerror="this.onerror=null; this.src='https://placehold.co/400x200/a65e5e/ffffff?text=Guava+Dehydrated'">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Guava</h3>
+                            <div class="product-short-description-container">
+                                <span class="product-short-description-text"></span>
+                                <a href="#" class="product-more-link" style="color: #e97b06;">...more</a>
+                                <a href="#" class="product-less-link-mob" style="color: #e97b06;"`>...less</a>
+                            </div>
+                            <p class="product-price" style="color: #e97b06;">₹220/- 100g</p>
+                        </div>
+                        <div class="product-buy-button-container">
+                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Guava')">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card-back">
+                        <div class="product-full-content">
+                            <h4 style="color: #e97b06;">Full Details: Guava</h4>
+                            <p>Aromatic slices rich in Vitamin C and fibre. Gently dehydrated to preserve tropical aroma and flesh texture. Tangy-sweet profile makes them perfect for snacking and cooking.</p>
+                            <h5 class="product-nutrition-heading">Nutritional Value (Per 100g)</h5>
+                            <ul class="product-nutrition-list">
+                                <li>Energy: 280 kcal</li>
+                                <li>Carbs: 68 g</li>
+                                <li>Fiber: 9 g</li>
+                                <li>Vitamin C: Very High</li>
+                            </ul>
+                            <p class="product-price-back" style="color: #e97b06;">Price: ₹220/- 100g</p>
+                        </div>
+                        <div class="product-back-action-container">
+                           <a href="#" class="product-less-link" style="color: #e97b06;">...less</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-card-front">
+                        <div class="product-image-container">
+                            <img src="images_naithika/products_new/pappaya.jpg" alt="Dehydrated Papaya Slices" onerror="this.onerror=null; this.src='https://placehold.co/400x200/a65e5e/ffffff?text=Papaya+Dehydrated'">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Papaya</h3>
+                            <div class="product-short-description-container">
+                                <span class="product-short-description-text"></span>
+                                <a href="#" class="product-more-link" style="color: #e97b06;">...more</a>
+                                <a href="#" class="product-less-link-mob" style="color: #e97b06;">...less</a>
+                            </div>
+                            <p class="product-price" style="color: #e97b06;">₹220/- 100g</p>
+                        </div>
+                        <div class="product-buy-button-container">
+                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Papaya')">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card-back">
+                        <div class="product-full-content">
+                            <h4 style="color: #e97b06;">Full Details: Papaya</h4>
+                            <p>Soft slices from fully ripe fruit with natural digestive enzymes. Dehydration concentrates sweetness while keeping a tender bite. A gentle, nutritious snack for all ages.</p>
+                            <h5 class="product-nutrition-heading">Nutritional Value (Per 100g)</h5>
+                            <ul class="product-nutrition-list">
+                                <li>Energy: 300 kcal</li>
+                                <li>Carbs: 75 g</li>
+                                <li>Fiber: 10 g</li>
+                                <li>Vitamin A & C: High</li>
+                            </ul>
+                            <p class="product-price-back" style="color: #e97b06;">Price: ₹220/- 100g</p>
+                        </div>
+                        <div class="product-back-action-container">
+                           <a href="#" class="product-less-link" style="color: #e97b06;">...less</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-card-front">
+                        <div class="product-image-container">
+                            <img src="realimages/fig2.jpeg" alt="Dehydrated Anjeer (Figs)" onerror="this.onerror=null; this.src='https://placehold.co/400x200/a65e5e/ffffff?text=Anjeer+Dehydrated'">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Anjeer (Figs)</h3>
+                            <div class="product-short-description-container">
+                                <span class="product-short-description-text"></span>
+                                <a href="#" class="product-more-link" style="color: #e97b06;">...more</a>
+                                <a href="#" class="product-less-link-mob" style="color: #e97b06;">...less</a>
+                            </div>
+                            <p class="product-price" style="color: #e97b06;">₹300/-100g</p>
+                        </div>
+                        <div class="product-buy-button-container">
+                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Anjeer (Figs)')">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card-back">
+                        <div class="product-full-content">
+                            <h4>Full Details: Anjeer (Figs)</h4>
+                            <p>Sun-dried figs offering rich, honeyed sweetness and dense texture. High in natural fibre and minerals - an age-old energy food. Perfect for healthy snacking or gifting.</p>
+                            <h5 class="product-nutrition-heading">Nutritional Value (Per 100g)</h5>
+                            <ul class="product-nutrition-list">
+                                <li>Energy: 320 kcal</li>
+                                <li>Carbs: 70 g</li>
+                                <li>Fiber: 12 g</li>
+                                <li>Calcium: High</li>
+                            </ul>
+                            <p class="product-price-back" style="color: #e97b06;">Price: ₹300/-100g</p>
+                        </div>
+                        <div class="product-back-action-container">
+                           <a href="#" class="product-less-link" style="color: #e97b06;">...less</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-card-front">
+                        <div class="product-image-container">
+                            <img src="images_naithika/products_new/jackfruit.webp" alt="Dehydrated Jackfruit" onerror="this.onerror=null; this.src='https://placehold.co/400x200/a65e5e/ffffff?text=Jackfruit+Dehydrated'">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Jackfruit</h3>
+                            <div class="product-short-description-container">
+                                <span class="product-short-description-text"></span>
+                                <a href="#" class="product-more-link" style="color: #e97b06;">...more</a>
+                                <a href="#" class="product-less-link-mob" style="color: #e97b06;">...less</a>
+                            </div>
+                            <p class="product-price" style="color: #e97b06;">₹250/-100g</p>
+                        </div>
+                        <div class="product-buy-button-container">
+                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Jackfruit')">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card-back">
+                        <div class="product-full-content">
+                            <h4>Full Details: Jackfruit</h4>
+                            <p>Aromatic slices capturing tropical sweetness and a unique scent. Lightly dried for a pleasant chew while retaining fibre. Excellent plant-based snack with local character.</p>
+                            <h5 class="product-nutrition-heading">Nutritional Value (Per 100g)</h5>
+                            <ul class="product-nutrition-list">
+                                <li>Energy: 310 kcal</li>
+                                <li>Carbs: 75 g</li>
+                                <li>Fiber: 10 g</li>
+                                <li>Vitamin B6: Moderate</li>
+                            </ul>
+                            <p class="product-price-back" style="color: #e97b06;">Price: ₹250/-100g</p>
+                        </div>
+                        <div class="product-back-action-container">
+                           <a href="#" class="product-less-link" style="color: #e97b06;">...less</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-card-front">
+                        <div class="product-image-container">
+                            <img src="images_naithika/products_new/pomegranate.jpg" alt="Dehydrated Pomegranate Arils" onerror="this.onerror=null; this.src='https://placehold.co/400x200/a65e5e/ffffff?text=Pomegranate Arils+Dehydrated'">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Pomegranate Arils</h3>
+                            <div class="product-short-description-container">
+                                <span class="product-short-description-text"></span>
+                                <a href="#" class="product-more-link" style="color: #e97b06;">...more</a>
+                                <a href="#" class="product-less-link-mob" style="color: #e97b06;">...less</a>
+                            </div>
+                            <p class="product-price" style="color: #e97b06;">₹250/-100g</p>
+                        </div>
+                        <div class="product-buy-button-container">
+                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Pomegranate Arils')">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card-back">
+                        <div class="product-full-content">
+                            <h4>Full Details: Pomegranate Arils</h4>
+                            <p>Tangy-sweet seeds delicately dried to retain ruby colour and antioxidants. Adds bright tartness to breakfasts, salads, and desserts. Premium, antioxidant-rich fruit snack.</p>
+                            <h5 class="product-nutrition-heading">Nutritional Value (Per 100g)</h5>
+                            <ul class="product-nutrition-list">
+                                <li>Energy: 330 kcal</li>
+                                <li>Carbs: 77 g</li>
+                                <li>Iron: 2.5 mg</li>
+                                <li>Vitamin C: High</li>
+                            </ul>
+                            <p class="product-price-back" style="color: #e97b06;">Price: ₹250/-100g</p>
+                        </div>
+                        <div class="product-back-action-container">
+                           <a href="#" class="product-less-link" style="color: #e97b06;">...less</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-card-front">
+                        <div class="product-image-container">
+                            <img src="realimages/banana.jpeg" alt="Dehydrated Banana Slices" onerror="this.onerror=null; this.src='https://placehold.co/400x200/a65e5e/ffffff?text=Banana+Dehydrated'">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Banana</h3>
+                            <div class="product-short-description-container">
+                                <span class="product-short-description-text"></span>
+                                <a href="#" class="product-more-link" style="color: #e97b06;">...more</a>
+                                <a href="#" class="product-less-link-mob" style="color: #e97b06;">...less</a>
+                            </div>
+                            <p class="product-price" style="color: #e97b06;">₹200/-100g</p>
+                        </div>
+                        <div class="product-buy-button-container">
+                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Banana')">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card-back">
+                        <div class="product-full-content">
+                            <h4>Full Details: Banana</h4>
+                            <p>Ripe bananas sliced and dried for naturally sweet, crisp chips. No oil frying or added sugars - just dehydrated fruit with full banana flavour. Kid-friendly energy snack.</p>
+                            <h5 class="product-nutrition-heading">Nutritional Value (Per 100g)</h5>
+                            <ul class="product-nutrition-list">
+                                <li>Energy: 310 kcal</li>
+                                <li>Carbs: 75 g</li>
+                                <li>Fiber: 7 g</li>
+                                <li>Potassium: High</li>
+                            </ul>
+                            <p class="product-price-back" style="color: #e97b06;">Price: ₹200/-100g</p>
+                        </div>
+                        <div class="product-back-action-container">
+                           <a href="#" class="product-less-link" style="color: #e97b06;">...less</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-card-front">
+                        <div class="product-image-container">
+                            <img src="realimages/grape.jpeg" alt="Dehydrated Black Grapes" onerror="this.onerror=null; this.src='https://placehold.co/400x200/a65e5e/ffffff?text=Black Grapes+Dehydrated'">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Black Grapes</h3>
+                            <div class="product-short-description-container">
+                                <span class="product-short-description-text"></span>
+                                <a href="#" class="product-more-link" style="color: #e97b06;">...more</a>
+                                <a href="#" class="product-less-link-mob" style="color: #e97b06;">...less</a>
+                            </div>
+                            <p class="product-price" style="color: #e97b06;">₹250/100g</p>
+                        </div>
+                        <div class="product-buy-button-container">
+                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Black Grapes')">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card-back">
+                        <div class="product-full-content">
+                            <h4>Full Details: Black Grapes</h4>
+                            <p>Sun-dried grapes offering concentrated natural sweetness and rich antioxidants. Chewy, jammy texture with deep flavour. Premium dried fruits ideal for gifting and snacking.</p>
+                            <h5 class="product-nutrition-heading">Nutritional Value (Per 100g)</h5>
+                            <ul class="product-nutrition-list">
+                                <li>Energy: 320 kcal</li>
+                                <li>Carbs: 78 g</li>
+                                <li>Fiber: 6 g</li>
+                                <li>Antioxidants: High</li>
+                            </ul>
+                            <p class="product-price-back" style="color: #e97b06;">Price: ₹250/100g</p>
+                        </div>
+                        <div class="product-back-action-container">
+                           <a href="#" class="product-less-link" style="color: #e97b06; ">...less</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Naithika WhatsApp Floating Button -->
+<a
+  href="https://wa.me/918125121347"
+  class="naithika-whatsapp-float"
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat with Naithika Foods on WhatsApp"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width="26"
+    height="26"
+    aria-hidden="true"
+  >
+    <path
+      fill="#FFFFFF"
+      d="M16 0C7.2 0 0 7.2 0 16c0 2.8.7 5.4 2 7.8L0 32l8.4-2.2C10.7 31.2 13.3 32 16 32c8.8 0 16-7.2 16-16S24.8 0 16 0zm0 29.3c-2.4 0-4.6-.6-6.6-1.8l-.5-.3-5 1.3 1.3-4.9-.3-.5c-1.2-2-1.9-4.3-1.9-6.8C3 8.6 8.6 3 16 3s13 5.6 13 13-5.6 13.3-13 13.3zm7.5-9.9c-.4-.2-2.4-1.2-2.8-1.3-.4-.2-.7-.2-1 .2-.3.4-1.2 1.3-1.5 1.6-.3.3-.6.3-1 .1-2.4-1.2-4-2.2-5.6-5-.4-.7.4-.7 1.1-2.3.1-.4.1-.7 0-.9-.1-.2-1-2.4-1.4-3.3-.4-.9-.8-.8-1-.8h-.9c-.3 0-.9.1-1.3.6-.4.4-1.7 1.7-1.7 4.2s1.8 4.9 2 5.2c.3.3 3.5 5.3 8.4 7.4 1.2.5 2.1.8 2.8 1 .9.3 1.8.3 2.5.2.8-.1 2.4-1 2.8-2 .4-1 .4-1.9.3-2-.1-.2-.4-.3-.8-.5z"
+    />
+  </svg>
+</a>
+
+
+
+    <footer id="footer">
+        <div id="footer_content">
+            
+            <div class="footer_col footer_about">
+                <h3 class="footer_section_title">About Naithika</h3>
+                <p class="footer_about_text">
+                    Naithika is a trusted brand of certified chemical free food products cultivated and harvested in collaboration with farmers who contribute to the goodness of people and the environment through sustainable farming practices.
+                </p>
+                
+                <img class="footer_fssai_img" 
+                    src="images_naithika/fssai.webp" 
+                    alt="FSSAI Logo"
+                >
+
+                <div class="footer_fssai_details">
+                    GSTN: 23625032007897<br>
+                    CIN: U56290TS2025PTC204748
+                </div>
+
+                <div class="footer_payment_icons">
+                    <img src="images_naithika/rupay.webp" style="width: 50px;" alt="Rupay">
+                    <img src="images_naithika/mastercard.webp" style="width: 50px;" alt="Mastercard">
+                </div>
+            </div>
+
+            <div class="footer_col footer_links_1">
+                <h3 class="footer_section_title">Our Story</h3>
+                <div class="footer_link_list">
+                    <a href="about.html">Our Story</a>
+                    <!-- <a href="#">Chemical free Shop</a> -->
+                    <!-- <a href="#">Login/Signup</a> -->
+                    <a href="blog.html">Blog</a>
+                    <!-- <a href="#">FAQ</a>
+                    <a href="#">Recipes</a> -->
+                    <a href="reciepe.html">Recipes</a>
+                </div>
+            </div>
+            
+            <div class="footer_col footer_links_2">
+                <h3 class="footer_section_title">Policies</h3>
+                <div class="footer_link_list">
+                    <a href="privacypolicy.html">Privacy Policy</a>
+                    <a href="termsandconditions.html">Terms and Condition</a>
+                    <a href="returnsandrefund.html">Returns and Refund</a>
+                    <a href="shippingpolicy.html">Shipping Policy</a>
+                    <a href="whychooseus.html">Why Choose US</a>
+                </div>
+                
+                <h3 class="footer_section_title" style="margin-top: 2rem;">Follow Us</h3>
+                <div class="footer_social_icons">
+                  <a href="https://www.facebook.com/profile.php?id=61582765700542" aria-label="Facebook" target="_blank">
+                      <svg class="footer_social_icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15h-2.5v-3H10V9.5c0-2.2 1.3-3.4 3.3-3.4 1.02 0 1.9.08 2.16.12v2.5h-1.5c-1.12 0-1.34.53-1.34 1.34V12h3l-.5 3h-2.5v6.8c4.56-.93 8-4.96 8-9.8z"/>
+                      </svg>
+                  </a>
+
+                  <a href="https://www.instagram.com/naithikafoods/" target="_blank" aria-label="Instagram">
+                        <svg class="footer_social_icon" fill="currentColor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 188.1c-40.3 0-73.2-32.9-73.2-73.2s32.9-73.2 73.2-73.2 73.2 32.9 73.2 73.2-32.9 73.2-73.2 73.2zm146.4-194.3c0 14.9-12 26.9-26.9 26.9s-26.9-12-26.9-26.9 12-26.9 26.9-26.9 26.9 12 26.9 26.9zm76.1 27.2c-1.7-35.7-9.9-67.3-36.2-93.5S367.3 9.7 331.6 8C295.2 6.3 152.8 6.3 116.4 8 80.7 9.7 49.1 17.9 22.9 44.2S9.7 80.7 8 116.4C6.3 152.8 6.3 295.2 8 331.6c1.7 35.7 9.9 67.3 36.2 93.5s57.8 34.5 93.5 36.2c36.4 1.7 178.8 1.7 215.2 0 35.7-1.7 67.3-9.9 93.5-36.2s34.5-57.8 36.2-93.5c1.7-36.4 1.7-178.8 0-215.2zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                        </svg>
+                    </a>
+
+                  <a href="https://www.youtube.com/@Naithikafoods" target="_blank" aria-label="YouTube">
+                    <svg class="footer_social_icon" viewBox="0 0 576 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.321-42.003 24.947-48.284 48.597C16 166.863 16 256 16 256s0 89.137 10.345 131.917c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.781 0 213.371-12.262c23.497-6.321 42.003-24.171 48.284-47.821C560 345.137 560 256 560 256s0-89.137-10.345-131.917zM232 334V178l142 78-142 78z"/>
+                    </svg>
+                  </a>
+              </div>
+            </div>
+
+            <div class="footer_col footer_contact">
+                <h3 class="footer_section_title">Visit Us</h3>
+                <div class="footer_contact_info_block">
+                    <span class="footer_contact_label">NAITHIKA</span>
+                    (A Pinnacle Group Company)
+                </div>
+                <div class="footer_contact_info_block">
+                    Vanesh Eada 402 <br>Plot No13, Jawahaer Colony <br>Chandanagar 500050
+                </div>
+                <div class="footer_contact_info_block">
+                    <a href="mailto:naithikafoods@gmail.com">naithikafoods@gmail.com</a>
+                </div>
+                <div class="footer_contact_info_block">
+                    +91 8106025114<br>
+                    +91 8125121347
+                </div>
+            </div>
+            
+        </div>
+        
+        <div id="footer_copyright">
+            Naithika Copyright &copy; 2026
+        </div>
+    </footer>
+
+    <script src="static/naithika.js"></script>
+
+
+
+    <script>
+    /* ---------- TRUNCATE TEXT ---------- */
+    function truncateText(text, wordLimit) {
+        let cleanedText = text.replace(/\.{3}less/i, '').trim();
+        if (!cleanedText) return { truncatedText: "", isTruncated: false };
+
+        const words = cleanedText.split(/\s+/).filter(Boolean);
+
+        if (words.length > wordLimit) {
+            return {
+                truncatedText: words.slice(0, wordLimit).join(" ") + "...",
+                isTruncated: true
+            };
+        }
+
+        return { truncatedText: cleanedText, isTruncated: false };
+    }
+
+    function isMobileView() {
+        return window.innerWidth <= 768;
+    }
+
+    /* ---------- INIT CARDS ---------- */
+    function initProductCards() {
+
+        const cards = document.querySelectorAll('.product-card');
+        const wordLimit = 15;
+
+        cards.forEach(card => {
+
+            const innerCard = card.querySelector('.product-card-inner');
+            const fullDescEl = card.querySelector(
+                '.product-card-back .product-full-content p:first-of-type'
+            );
+            const shortTextEl = card.querySelector('.product-short-description-text');
+
+            const moreLink = card.querySelector('.product-more-link');
+            const lessLink = card.querySelector('.product-less-link');        // desktop
+            const lessLinkMob = card.querySelector('.product-less-link-mob'); // mobile
+
+            if (!innerCard || !fullDescEl || !shortTextEl) return;
+
+            const fullText = fullDescEl.textContent;
+            const { truncatedText, isTruncated } = truncateText(fullText, wordLimit);
+
+            /* ---------- INITIAL STATE ---------- */
+            shortTextEl.textContent = truncatedText;
+
+            if (moreLink) {
+                moreLink.style.display = isTruncated ? 'inline' : 'none';
+            }
+
+            if (lessLinkMob) {
+                lessLinkMob.style.display = 'none'; // 🔑 FIX: hide on load
+            }
+
+            /* ---------- MORE ---------- */
+            if (moreLink && isTruncated) {
+                moreLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    if (isMobileView()) {
+                        // MOBILE → expand text inline
+                        shortTextEl.textContent = fullText;
+                        moreLink.style.display = 'none';
+                        if (lessLinkMob) lessLinkMob.style.display = 'inline';
+                    } else {
+                        // DESKTOP → flip card
+                        innerCard.classList.add('is-flipped');
+                    }
+                });
+            }
+
+            /* ---------- LESS (MOBILE) ---------- */
+            if (lessLinkMob) {
+                lessLinkMob.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    shortTextEl.textContent = truncatedText;
+                    lessLinkMob.style.display = 'none';
+                    if (moreLink && isTruncated) {
+                        moreLink.style.display = 'inline';
+                    }
+                });
+            }
+
+            /* ---------- LESS (DESKTOP) ---------- */
+            if (lessLink) {
+                lessLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    innerCard.classList.remove('is-flipped');
+                });
+            }
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', initProductCards);
+
+    /* ---------- WHATSAPP ---------- */
+    function redirectToWhatsApp(productName) {
+        const phoneNumber = "9539717388";
+        const message =
+            `Hello, I would like to buy some of your products.\nProduct: ${productName}\nQuantity: `;
+
+        const whatsappURL =
+            `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+        window.open(whatsappURL, "_blank");
+    }
+</script>
+
+
+
+
+
+</body>
+</html>

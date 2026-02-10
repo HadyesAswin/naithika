@@ -1,0 +1,1541 @@
+/*
+ * =========================================================================
+ * CONSOLIDATED AND WELL-STRUCTURED CSS (FIXED & UNIFIED)
+ * Resolves body/root conflicts and applies brand variable abstractions.
+ * =========================================================================
+ */
+
+/* =================================
+ * 1. BASE RESET, TYPOGRAPHY, & UTILITIES
+ * ================================= */
+
+/* Base Reset and Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    /* Unified Base Style - Specific pages override with body class if needed (e.g. .product-page-body) */
+    font-family: 'Inter', sans-serif; /* Base font */
+    color: #333;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    overflow-x: hidden; 
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h2, h3 {
+  font-family: 'Playfair Display', serif; /* Moved from Contact Us section */
+}
+html {
+    scroll-behavior: smooth; /* Moved from Products section */
+}
+
+/* Utility Container */
+.header_container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Prevents the main document from scrolling when the mobile menu is active */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Base Color Variables (UNIFIED BLOCK) */
+:root {
+    /* Main Brand Colors (Used by Header/Footer) */
+    --brand-primary: #6A0D0D; /* Darker red/maroon */
+    --brand-secondary: #D1B48C; /* Soft gold */
+    
+    /* Product Page Variables */
+    --product-primary-color: #7d4040d2; 
+    --product-secondary-color: #4f381f; 
+    --product-text-color: #ffffff;
+    --product-secondary-text-color: #ffffff;
+    --product-light-bg: #f8f9fa;
+    --product-card-bg: #fff;
+    
+    /* Contact Us Variables */
+    --primary-dark: #5c3d2e;   /* Deep earthy brown */
+    --primary: #8b5e3c;        /* Warm coffee brown */
+    --secondary: #c8a27a;      /* Light caramel */
+    --accent: #f4e1c1;         /* Beige accent */
+    --bg-light: #faf8f4;       /* Soft cream background */
+    --text-dark: #2e2b29;      /* Deep text brown */
+    --white: #fff;
+}
+
+
+/* =================================
+ * 2. HEADER & NAVIGATION STYLES
+ * ================================= */
+
+/* --- 2.1. TOP PROMOTIONAL BAR --- */
+#header_top_bar {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 8px 0;
+    font-weight: 300;
+}
+#header_top_bar .header_container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.header_promo_message {
+    text-align: center;
+    flex-grow: 1;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 12px !important;
+}
+.header_secondary_links {
+    display: none;
+    gap: 15px;
+    align-items: center;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 12px !important;
+}
+
+.header_secondary_links a {
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    transition: color 0.2s;
+}
+
+.header_secondary_links a:hover {
+    color: var(--brand-secondary); /* Abstraction Applied */
+}
+.header_contact_icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+.header_divider {
+    color: #555;
+    padding: 0 5px;
+}
+
+/* --- 2.2. MAIN HEADER SECTION (Sticky) --- */
+#header_main_content {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 0px 0;
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+#header_main_content .header_container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    gap: 20px;
+    min-height: 60px;
+}
+
+/* Logo Styling */
+#header_logo_image {
+    height: 60px;
+    /* Placeholder/Example Content URL */
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50"><text x="5" y="35" style="font-family: Playfair Display, serif; font-size: 30px; fill: #6A0D0D; font-weight: 700;">NAITHIKA</text><rect x="5" y="40" width="120" height="2" style="fill:#D1B48C"/></svg>');
+    max-width: 80%;
+}
+/* Navigation (Desktop) */
+#header_nav {
+    display: none;
+    justify-content: center;
+    gap: 30px;
+}
+.nav-link {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #444;
+    letter-spacing: 0.5px;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.2s;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--brand-primary); /* Abstraction Applied */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--brand-secondary); /* Abstraction Applied */
+    transition: width 0.3s ease-out;
+}
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+/* Dropdown Styling (Desktop) */
+.header_dropdown_group {
+    position: relative;
+}
+.header_dropdown_toggle {
+    display: flex;
+    align-items: center;
+}
+.header_dropdown_arrow {
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+.header_dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    padding: 10px 0;
+    z-index: 600;
+}
+
+/* Search Group and Icons */
+.header_search_group {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#header_search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 200px;
+}
+#header_search_input {
+    width: 100%;
+    padding: 8px 30px 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
+}
+#header_search_input:focus {
+    border-color: var(--brand-secondary); /* Abstraction Applied */
+    outline: none;
+}
+
+#header_search_button {
+    position: absolute;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 8px;
+}
+.header_search_icon {
+    width: 18px;
+    height: 18px;
+    color: #666;
+    transition: color 0.2s;
+}
+#header_search_button:hover .header_search_icon {
+    color: #333;
+}
+
+/* Mobile Menu Toggle (Hamburger) */
+.header_mobile_menu_toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: block;
+    order: 3;
+    justify-self: end;
+}
+.header_mobile_menu_toggle_icon {
+    width: 24px;
+    height: 24px;
+    color: #333;
+}
+
+/* --- 2.3. MOBILE NAVIGATION SLIDE-IN CSS --- */
+/* 1. Base State: Hidden Off-Screen */
+.header_mobile_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    max-width: 300px; 
+    height: 100vh;
+    background-color: #fff; 
+    z-index: 1000; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-out;
+    padding: 20px;
+    overflow-y: auto; 
+    display: block; 
+}
+/* 2. Active State: Slide into view */
+.header_mobile_menu.is-active {
+    transform: translateX(0); 
+}
+/* Styling for the list of links inside the mobile menu */
+.header_mobile_menu .header_nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    margin-top: 50px; 
+}
+.header_mobile_menu .header_nav_list .nav-link {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee; 
+}
+
+.header_mobile_menu .header_nav_list .nav-link:hover {
+    color: var(--brand-primary); /* Abstraction Applied */
+}
+
+/* --- 2.4. HEADER MEDIA QUERIES --- */
+/* Adjusting the mobile layout grid */
+@media (max-width: 768px) {
+    #header_main_content .header_container {
+        grid-template-columns: 1fr auto auto; 
+        gap: 10px;
+        height: 80px;
+    }
+    #header_logo_image {
+        height: 55px !important; 
+        width: 55px !important;
+        /* Placeholder/Example Content URL */
+        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50"><text x="5" y="35" style="font-family: Playfair Display, serif; font-size: 30px; fill: #6A0D0D; font-weight: 700;">NAITHIKA</text><rect x="5" y="40" width="120" height="2" style="fill:#D1B48C"/></svg>');
+        max-width: 100%;
+    }
+    #header_nav {
+        display: none;
+    }
+    .header_search_group {
+        order: 2;
+        justify-content: center;
+    }
+    #header_search {
+        max-width: 150px;
+    }
+}
+
+/* DESKTOP MEDIA QUERY (769px and up) */
+@media (min-width: 769px) {
+    #header_top_bar .header_container {
+        justify-content: space-between;
+    }
+    .header_promo_message {
+        text-align: left;
+    }
+    .header_secondary_links {
+        display: flex;
+    }
+    #header_main_content .header_container {
+        grid-template-columns: auto 1fr auto;
+        min-height: 80px;
+    }
+    #header_nav {
+        display: flex;
+    }
+    .header_mobile_menu_toggle {
+        display: none;
+    }
+    #header_search {
+        max-width: 250px; 
+    }
+}
+
+
+/* DESKTOP DROPDOWN */
+.header_dropdown_group {
+    position: relative;
+}
+
+.header_dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 220px;
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    z-index: 600;
+}
+
+.header_dropdown_group:hover .header_dropdown_menu {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+    background: #f5f5f5;
+    color: var(--brand-primary);
+}
+
+/* MOBILE PRODUCTS HEADING */
+.mobile_category_heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee; 
+}
+
+.mobile-sub-item {
+    padding-left: 15px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.mobile-sub-item:hover {
+    color: var(--brand-primary);
+}
+
+
+
+/* =================================
+ * 3. FOOTER STYLING
+ * ================================= */
+#footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    padding: 40px 0 0 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+}
+#footer_content {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+.footer_col {
+    flex: 1 1 200px;
+    min-width: 200px;
+}
+.footer_section_title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+.footer_about_text {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #aaa;
+}
+
+/* FSSAI/Details */
+.footer_fssai_img {
+    width: 60px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.footer_fssai_details {
+    font-size: 0.75rem;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.footer_payment_icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Links */
+.footer_link_list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.footer_link_list a {
+    color: #aaa;
+    transition: color 0.2s;
+}
+.footer_link_list a:hover {
+    color: var(--brand-secondary); /* Abstraction Applied */
+}
+
+/* Social Icons */
+.footer_social_icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+.footer_social_icon {
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    transition: color 0.2s;
+}
+.footer_social_icon:hover {
+    color: var(--brand-secondary); /* Abstraction Applied */
+}
+
+/* Contact Info */
+.footer_contact_info_block {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #aaa;
+}
+.footer_contact_label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+.footer_contact_info_block a {
+    color: var(--brand-secondary); /* Abstraction Applied */
+}
+
+/* Copyright */
+#footer_copyright {
+    background-color: #0d0d0d;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 30px; 
+}
+
+/* Mobile Adjustments for Footer */
+@media (max-width: 550px) {
+    #footer_content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .footer_col {
+        min-width: 100%;
+    }
+}
+
+
+
+/* =================================
+ * 4. PRODUCTS PAGE STYLING
+ * (Uses a class to override base body styles)
+ * ================================= */
+.product-page-body {
+    /* Overrides for product pages where a different look is desired */
+    font-family: 'Poppins', sans-serif;
+    color: #333; 
+    background-color: var(--product-light-bg);
+}
+
+.product-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header and Brand */
+.product-header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: var(--product-card-bg);
+    border-bottom: 3px solid var(--product-primary-color);
+}
+.product-brand-logo {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--product-primary-color);
+    text-decoration: none;
+}
+.product-tagline {
+    font-size: 1em;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+/* Category Navigation Circles */
+.product-category-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 50px;
+    margin: 40px 0 60px;
+}
+.product-category-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--product-card-bg);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #333; /* Hardcoded color from original, but should be #333, not white text from variable */
+    border: 4px solid var(--product-primary-color);
+    font-weight: 600;
+    font-size: 0.95em;
+}
+.product-category-circle:hover {
+    background-color: var(--product-primary-color);
+    color: var(--product-card-bg);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Headings */
+.product-section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--product-primary-color);
+    text-align: center;
+    margin: 20px 0 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--product-secondary-color);
+}
+
+/* Product Grid (4 cards per line) */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-bottom: 80px;
+}
+
+/* --- 4.1. 3D Card Flip Styles --- */
+.product-card {
+    flex: 0 0 calc(25% - 15px); 
+    box-sizing: border-box;
+    border-radius: 12px;
+    perspective: 1000px; 
+    position: relative;
+    min-height: 480px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+}
+
+.product-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s; 
+    transform-style: preserve-3d; 
+    border-radius: 12px;
+}
+.product-card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+.product-card-front, .product-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--product-card-bg);
+    box-shadow: none; 
+    color: #333; 
+}
+.product-card-back {
+    transform: rotateY(180deg); 
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.product-card-back h4 {
+    padding: 10px;
+    margin-top: 0;
+    color: var(--product-primary-color);
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+.product-card-back p {
+    padding: 0 10px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+/* --- 4.2. Front Face Content Styles --- */
+.product-image-container {
+    height: 200px;
+    overflow: hidden;
+    background-color: var(--product-light-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+.product-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.product-card-front:hover .product-image-container img {
+    transform: scale(1.05);
+}
+.product-content {
+    padding: 15px;
+    text-align: left;
+    position: relative;
+}
+.product-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+/* Container for description and ...more link */
+.product-short-description-container {
+    font-size: 0.85em;
+    color: #6c757d;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    min-height: 40px;
+}
+
+.product-more-link {
+    color: var(--product-primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: none; 
+    margin-left: 4px;
+}
+.product-more-link:hover {
+    text-decoration: underline;
+}
+.product-less-link {
+    color: var(--product-primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 4px;
+}
+.product-less-link:hover {
+    text-decoration: underline;
+}
+.product-price {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--product-primary-color);
+    margin-top: 5px;
+    z-index: 500;
+    /* align-self: self-end; */
+}
+
+/* Buy Button Container (Front and Back) */
+.product-buy-button-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--product-card-bg); 
+    padding: 10px 0; 
+    border-top: 1px solid #eee;
+}
+
+.product-back-action-container {
+      padding-top: 10px;
+      border-top: 1px solid #eee;
+}
+.product-buy-button {
+    display: block;
+    width: calc(100% - 30px);
+    padding: 10px;
+    margin: 0 15px; 
+    background-color: var(--product-primary-color);
+    color: var(--product-text-color);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.2s;
+}
+.product-buy-button:hover {
+    background-color: #ffffff;
+    color: var(--product-secondary-color);
+    border: #7d4040d2 solid 2px;
+}
+
+/* Buy button on the back side should look like the primary action */
+.product-back-action-container .product-buy-button {
+    background-color: var(--product-primary-color);
+    color: white;
+}
+.product-back-action-container .product-buy-button:hover {
+    background-color: #218838;
+}
+
+/* --- 4.3. Back Face Content Styles --- */
+.product-full-content {
+    flex-grow: 1; 
+    overflow-y: auto; 
+    padding-right: 5px; 
+}
+
+/* Styles for Nutritional Content */
+.product-nutrition-heading {
+    font-size: 1em;
+    font-weight: 700;
+    color: #555;
+    padding: 0 10px;
+    margin: 15px 0 5px;
+    border-bottom: 1px dashed #ddd;
+}
+.product-nutrition-list {
+    list-style: none;
+    padding: 0 10px 10px 15px; 
+    margin: 0;
+    font-size: 0.85em;
+    text-align: left;
+}
+.product-nutrition-list li {
+    margin-bottom: 3px;
+    display: list-item; 
+    list-style-type: disc;
+    margin-left: 15px;
+    color: #6c757d;
+}
+.product-price-back {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--product-secondary-color);
+    margin: 10px 0 0; 
+    padding: 0 10px; 
+}
+
+/* --- 4.4. Media Queries for Responsiveness --- */
+@media (max-width: 1200px) {
+    .product-card {
+        flex: 0 0 calc(33.333% - 14px); 
+    }
+}
+@media (max-width: 900px) {
+    .product-card {
+        flex: 0 0 calc(50% - 10px); 
+        min-height: 450px; 
+    }
+    .product-category-nav {
+        gap: 20px;
+    }
+    .product-category-circle {
+        width: 100px;
+        height: 100px;
+        font-size: 0.9em;
+    }
+}
+@media (max-width: 900px) {
+    .product-card {
+        min-height: auto !important;
+    }
+}
+
+/* ============================
+   FINAL MOBILE FIX (<600px)
+   ============================ */
+@media (max-width: 600px) {
+
+    /* ONE PRODUCT PER ROW – NO BIG GAPS */
+    .product-card {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 0 5px 0 !important; /* tight gap */
+        padding: 0 !important;
+        perspective: none !important;
+    }
+
+    /* INNER WRAPPER FIX */
+    .product-card-inner {
+        display: flex !important;
+        flex-direction: row !important;
+        width: 100% !important;
+        height: auto !important;
+        transform: none !important;
+        position: relative !important;
+        gap: 0 !important; /* remove space */
+    }
+
+    /* HIDE BACK CARD IN MOBILE */
+    .product-card-back {
+        display: none !important;
+    }
+
+    /* FRONT CARD — HORIZONTAL LAYOUT */
+    .product-card-front {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 10px;
+        margin: 0 !important;
+        background: var(--product-card-bg);
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+        position: relative !important;
+        gap: 10px;
+    }
+
+    /* IMAGE LEFT */
+    .product-image-container {
+        width: 35% !important;
+        height: 120px !important;
+        border-radius: 8px;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .product-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* TEXT RIGHT */
+    .product-content {
+        width: 65% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        height: auto !important;
+        display: flex;
+        flex-direction: column; /* stack Title, Desc, Price */
+        justify-content: flex-start;
+    }
+
+    /* TITLE */
+    .product-title {
+        font-size: 1em;
+        margin: 0 0 5px 0;
+        padding: 0;
+    }
+
+    /* DESCRIPTION */
+    .product-short-description-container {
+        font-size: 0.85em;
+        line-height: 1.35;
+        margin-bottom: 8px;
+        height: auto !important;
+    }
+
+    .product-more-link,
+    .product-less-link {
+        font-weight: 600;
+        margin-left: 3px;
+        cursor: pointer;
+    }
+
+    /* PRICE */
+    .product-price {
+        margin: 4px 0 10px 0;
+        padding: 0;
+        font-size: 1.05em;
+    }
+
+    /* BUY BUTTON — AT THE VERY BOTTOM OF TEXT */
+    .product-buy-button-container {
+        /* width: 100% !important; */
+        margin-top: 200px !important; 
+        /* background-color: #218838;   */
+    }
+
+    .product-buy-button {
+        width: 30% !important;
+        padding: 10px;
+        font-size: 0.9em;
+        border-radius: 6px;
+        /* margin-top: 100px !important; */
+    }
+}
+
+
+
+
+/* =================================
+ * 5. CONTACT US PAGE STYLING
+ * (No body selector needed here as we rely on base)
+ * ================================= */
+
+/* --- 5.1. HEADER SECTION --- */
+.contactus-header {
+  background: linear-gradient(rgba(92,61,46,0.7), rgba(139,94,60,0.7)), 
+              url('images_naithika/dry1.jpg') center/cover no-repeat;
+  height: 250px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contactus-page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.contactus-page-paragraph {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+/* --- 5.2. CONTACT CONTENT AREA --- */
+.contactus-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.contactus-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* FORM SECTION */
+.contactus-form-area {
+  flex: 2;
+  background: var(--white);
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(92,61,46,0.1);
+  transition: all 0.3s ease;
+}
+
+.contactus-form-area:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(92,61,46,0.15);
+}
+
+.contactus-section-title {
+  color: var(--primary-dark);
+  font-size: 2rem;
+  margin-bottom: 25px;
+  border-left: 5px solid var(--secondary);
+  padding-left: 12px;
+}
+
+.contactus-form-group {
+  margin-bottom: 20px;
+}
+
+.contactus-label {
+  display: block;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.contactus-input, .contactus-textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.3s;
+  background-color: #fffdfb;
+}
+
+.contactus-input:focus, .contactus-textarea:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(200,162,122,0.3);
+  outline: none;
+}
+
+.contactus-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contactus-button {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.contactus-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* INFO SECTION */
+.contactus-info {
+  flex: 1;
+  background: var(--primary-dark);
+  color: var(--white);
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(92,61,46,0.15);
+}
+
+.contactus-info-title {
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.contactus-info p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.contactus-info strong {
+  color: var(--secondary);
+}
+
+/* --- 5.3. RESPONSIVENESS --- */
+@media (max-width: 992px) {
+  .contactus-content-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactus-header {
+    height: 200px;
+  }
+
+  .contactus-page-title {
+    font-size: 2rem;
+  }
+
+  .contactus-form-area, .contactus-info {
+    padding: 25px;
+  }
+
+  .contactus-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactus-page-title {
+    font-size: 1.7rem;
+  }
+
+  .contactus-page-paragraph {
+    font-size: 1.1rem;
+  }
+
+  .contactus-container {
+    padding: 10px;
+  }
+}
+
+
+/* =================================
+ * 6. OFFER & PROMOTIONAL SECTIONS
+ * ================================= */
+
+/* --- 6.1. Offer Section (Top Picks) --- */
+.top-picks {
+  background: linear-gradient(135deg, #f9fff9, #fffaf0);
+  padding: 60px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.styled-heading {
+  font-size: 2.2rem;
+  color: #5a3914;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.offer-subtitle {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 40px;
+  font-style: italic;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Offer Container */
+.offer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Product Cards */
+.product-cards {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  width: 250px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-cards:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Offer Badge */
+.offer-badge {
+  position: absolute;
+  top: 15px;
+  left: -40px;
+  background: linear-gradient(135deg, #754003, #ffc371);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 6px 50px;
+  transform: rotate(-35deg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Image Wrapper */
+.image-wrapper img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-cards:hover .image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Text Styling */
+.product-cards h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  color: #7d612e;
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.details p {
+  font-size: 0.85rem;
+  color: #555;
+  padding: 0 10px;
+  line-height: 1.4;
+}
+
+/* See More Button */
+.more-offer {
+  background: linear-gradient(90deg, #a97118, #84683e);
+  color: #fff;
+  padding: 10px 0;
+  font-weight: 600;
+  border-top: 1px solid #c8e6c9;
+  transition: background 0.3s ease;
+}
+
+.more-offer:hover {
+  background: linear-gradient(90deg, #de9a63, #f4ad73);
+}
+
+/* --- 6.2. Deluxe Circles Section --- */
+.deluxe-circles {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 70px;
+  padding: 80px 20px;
+  background: radial-gradient(circle at top, #f7fff7, #ffffff);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Each Circle Box */
+.circle-box {
+  width: 240px;
+  min-height: 320px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Anchor */
+.circle-box a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Circle Image Wrapper */
+.circle-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(135deg, #99631e, #bba366, #d6caa5);
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+  transition: transform 0.5s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+/* Image */
+.circle-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.4s ease;
+}
+
+/* Hover Effects */
+.circle-box:hover .circle-img {
+  transform: scale(1.07);
+  box-shadow: 0 15px 45px rgba(82, 63, 46, 0.35);
+}
+
+.circle-box:hover .circle-img img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Text Styling */
+.circle-box h3 {
+  margin-top: 18px;
+  font-size: 1.3rem;
+  color: #c27945;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  transition: color 0.3s ease;
+  min-height: 30px;
+}
+
+.circle-box p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 8px;
+  line-height: 1.4;
+  max-width: 200px;
+  min-height: 40px;
+}
+
+.circle-box:hover h3 {
+  color: #7d672e;
+  text-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Floating Animation for Organic Feel */
+.circle-box {
+  animation: floatUp 3s ease-in-out infinite;
+}
+.circle-box:nth-child(2) { animation-delay: 1s; }
+.circle-box:nth-child(3) { animation-delay: 2s; }
+
+/* --- 6.3. Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.testimonial-section {
+  padding: 4rem 1.5rem;
+  background: #f9f9f6;
+  text-align: center;
+}
+
+.testimonial-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2f3e2e;
+}
+
+.testimonial-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.testimonial-track-wrapper {
+  overflow: hidden;
+  max-width: 960px;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.testimonial-card {
+  min-width: 33.3333%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  background: #ffffff;
+  margin: 0 0.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.testimonial-image {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.testimonial-name {
+  font-weight: 600;
+  color: #4f6f52;
+}
+
+.testimonial-btn {
+  background: #4f6f52;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  padding: 0.6rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.testimonial-btn:hover {
+  background: #3f5d42;
+}
+
+
+/* ===============================
+   Tablet / iPad (≤ 1024px)
+================================ */
+@media (max-width: 1024px) {
+  .testimonial-track-wrapper {
+    max-width: 640px;
+  }
+
+  .testimonial-card {
+    min-width: 50%;
+  }
+}
+
+/* ===============================
+   Mobile (≤ 768px)
+================================ */
+@media (max-width: 768px) {
+  .testimonial-track-wrapper {
+    max-width: 320px;
+  }
+
+  .testimonial-card {
+    min-width: 100%;
+    margin: 0;
+  }
+
+  .testimonial-btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .testimonial-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* ===============================
+   Small Mobile (≤ 480px)
+================================ */
+@media (max-width: 480px) {
+  .testimonial-section {
+    padding: 3rem 1rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-image {
+    width: 55px;
+    height: 55px;
+  }
+}
