@@ -129,6 +129,7 @@
 
             <a href="offer.html" class="nav-link">OFFERS</a>
             <a href="contact.html" class="nav-link">CONTACT US</a>
+            <a href="cart.html" class="nav-link">CART</a>
         </nav>
 
         <!-- MOBILE MENU BUTTON -->
@@ -155,11 +156,11 @@
         <a href="dehydrated_vegetables.html" class="mobile-sub-item">Dehydrated Vegetables</a>
         <a href="pickles_and_powders.html" class="mobile-sub-item">Pickles & Powders</a>
         <a href="herbal_tea.html" class="mobile-sub-item">Herbal Teas</a>
+        <a href="cart.html" class="mobile-sub-item">CART</a>
 
         <a href="contact.html" class="nav-link">CONTACT US</a>
     </div>
 </div>
-
 
     <div class="product-container">
         <h2 id="product-dehydrated-fruits" class="product-section-heading" style="color: #e97b06;">Dehydrated Fruits & Leathers</h2>
@@ -181,7 +182,11 @@
                             <p class="product-price" style="color: #e97b06;">₹250/100g</p>
                         </div>
                         <div class="product-buy-button-container" >
-                            <button class="product-buy-button product-front-buy-button" onclick="redirectToWhatsApp('Mango')" style="background-color: #e97b06;">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Mango', 250, 'images_naithika/products_new/mango.webp')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -221,7 +226,11 @@
                             <p class="product-price" style="color: #e97b06;">₹250/100g</p>
                         </div>
                         <div class="product-buy-button-container" >
-                            <button class="product-buy-button product-front-buy-button" onclick="redirectToWhatsApp('Chikku (Sapota)')" style="background-color: #e97b06;" >Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Chikku (Sapota)', 250, 'realimages/chikku.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -261,7 +270,11 @@
                             <p class="product-price" style="color: #e97b06;">₹280/100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Jamun')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Jamun', 280, 'images_naithika/products_new/jamun.jpg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -301,7 +314,11 @@
                             <p class="product-price" style="color: #e97b06;">₹250/100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Pineapple')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Pineapple', 250, 'realimages/pineapple2.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -340,7 +357,11 @@
                             <p class="product-price" style="color: #e97b06;">₹250/100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Apple')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Apple', 250, 'realimages/apple.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -379,7 +400,11 @@
                             <p class="product-price" style="color: #e97b06;">₹220/- 100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Guava')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Guava', 220, 'images_naithika/products_new/guava.jpg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -418,7 +443,11 @@
                             <p class="product-price" style="color: #e97b06;">₹220/- 100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Papaya')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Papaya', 220, 'images_naithika/products_new/pappaya.jpg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -457,7 +486,11 @@
                             <p class="product-price" style="color: #e97b06;">₹300/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Anjeer (Figs)')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Anjeer (Figs)', 300, 'realimages/fig2.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -496,7 +529,11 @@
                             <p class="product-price" style="color: #e97b06;">₹250/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Jackfruit')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Jackfruit', 250, 'images_naithika/products_new/jackfruit.webp')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -535,7 +572,11 @@
                             <p class="product-price" style="color: #e97b06;">₹250/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Pomegranate Arils')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Pomegranate Arils', 250, 'images_naithika/products_new/pomegranate.jpg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -573,7 +614,11 @@
                             <p class="product-price" style="color: #e97b06;">₹200/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Banana')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Banana', 200, 'realimages/banana.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -611,7 +656,11 @@
                             <p class="product-price" style="color: #e97b06;">₹250/100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Black Grapes')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Black Grapes', 250, 'realimages/grape.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -861,17 +910,25 @@
 
     window.addEventListener('DOMContentLoaded', initProductCards);
 
-    /* ---------- WHATSAPP ---------- */
-    function redirectToWhatsApp(productName) {
-        const phoneNumber = "8125121347";
-        const message =
-            `Hello, I would like to buy some of your products.\nProduct: ${productName}\nQuantity: `;
+function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-        const whatsappURL =
-            `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    let existingProduct = cart.find(item => item.name === name);
 
-        window.open(whatsappURL, "_blank");
+    if (existingProduct) {
+        existingProduct.quantity += 1;
+    } else {
+        cart.push({
+            name: name,
+            price: price,
+            image: image,
+            quantity: 1
+        });
     }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(`${name} has been added to your cart.`);
+}
 </script>
 
 

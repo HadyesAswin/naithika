@@ -126,6 +126,7 @@
 
             <a href="offer.html" class="nav-link">OFFERS</a>
             <a href="contact.html" class="nav-link">CONTACT US</a>
+            <a href="cart.html" class="nav-link">CART</a>
         </nav>
 
         <!-- MOBILE MENU BUTTON -->
@@ -152,6 +153,7 @@
         <a href="dehydrated_vegetables.html" class="mobile-sub-item">Dehydrated Vegetables</a>
         <a href="pickles_and_powders.html" class="mobile-sub-item">Pickles & Powders</a>
         <a href="herbal_tea.html" class="mobile-sub-item">Herbal Teas</a>
+        <a href="cart.html" class="mobile-sub-item">CART</a>
 
         <a href="contact.html" class="nav-link">CONTACT US</a>
     </div>
@@ -266,7 +268,11 @@
                             <p class="product-price" style="color: #e97b06;">₹280/100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Jamun')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Jamun', 280, 'images_naithika/products_new/jamun.jpg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -306,7 +312,11 @@
                             <p class="product-price" style="color: #e97b06;">₹250/100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Pineapple')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Pineapple', 250, 'realimages/pineapple2.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -345,7 +355,11 @@
                             <p class="product-price" style="color: #e97b06;">₹250/100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Apple')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Apple', 250, 'realimages/apple.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -384,7 +398,11 @@
                             <p class="product-price" style="color: #e97b06;">₹220/- 100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Guava')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Guava', 220, 'images_naithika/products_new/guava.jpg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -423,7 +441,11 @@
                             <p class="product-price" style="color: #e97b06;">₹220/- 100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Papaya')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Papaya', 220, 'images_naithika/products_new/pappaya.jpg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -462,7 +484,11 @@
                             <p class="product-price" style="color: #e97b06;">₹300/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Anjeer (Figs)')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Anjeer (Figs)', 300, 'realimages/fig2.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -501,7 +527,11 @@
                             <p class="product-price" style="color: #e97b06;">₹250/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Jackfruit')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Jackfruit', 250, 'images_naithika/products_new/jackfruit.webp')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -540,7 +570,11 @@
                             <p class="product-price" style="color: #e97b06;">₹250/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Pomegranate Arils')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Pomegranate Arils', 250, 'images_naithika/products_new/pomegranate.jpg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -578,7 +612,11 @@
                             <p class="product-price" style="color: #e97b06;">₹200/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Banana')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Banana', 200, 'realimages/banana.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -616,7 +654,11 @@
                             <p class="product-price" style="color: #e97b06;">₹250/100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #e97b06;" onclick="redirectToWhatsApp('Black Grapes')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Black Grapes', 250, 'realimages/grape.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -661,7 +703,11 @@
                             <p class="product-price" style="color: #218118de;">₹180 / 100 g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #218118de;" onclick="redirectToWhatsApp('Tomato Slices')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Tomato Slices', 180, 'images_naithika/products_new/tomato.jpg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -704,7 +750,11 @@
                             <p class="product-price" style="color: #218118de;">₹200/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #218118de;" onclick="redirectToWhatsApp('Beetroot')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Beetroot', 200, 'realimages/beetroot.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -743,7 +793,11 @@
                             <p class="product-price" style="color: #218118de;">₹200/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #218118de;" onclick="redirectToWhatsApp('Carrot')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Carrot', 200, 'realimages/carrot.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -782,7 +836,11 @@
                             <p class="product-price" style="color: #218118de;">₹240/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #218118de;"  onclick="redirectToWhatsApp('Amla (Indian Gooseberry)')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Amla (Indian Gooseberry)', 240, 'realimages/amla3.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -821,7 +879,11 @@
                             <p class="product-price" style="color: #218118de;">₹220/- 100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #218118de;" onclick="redirectToWhatsApp('Ginger')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Ginger', 220, 'images_naithika/products_new/ginger.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -862,7 +924,11 @@
                             <p class="product-price" style="color: #218118de;">₹220/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #218118de;" onclick="redirectToWhatsApp('Ash Gourd (Petha)')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Ash Gourd (Petha)', 220, 'realimages/ash_gourd.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -901,7 +967,11 @@
                             <p class="product-price" style="color: #218118de;">₹200/100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #218118de;" onclick="redirectToWhatsApp('Pumpkin')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Pumpkin', 200, 'realimages/pumpkin2.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -940,7 +1010,11 @@
                             <p class="product-price" style="color: #218118de;">₹200/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #218118de;" onclick="redirectToWhatsApp('Lemon')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Lemon', 200, 'images_naithika/products_new/lemon.webp')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -979,7 +1053,11 @@
                             <p class="product-price" style="color: #218118de;">₹220/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #218118de;" onclick="redirectToWhatsApp('Moringa (Drumstick Leaves)')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Moringa (Drumstick Leaves)', 220, 'realimages/moringa_podi2.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1019,7 +1097,11 @@
                             <p class="product-price" style="color: #218118de;">₹150/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #218118de;" onclick="redirectToWhatsApp('Curry Leaves')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Curry Leaves', 150, 'realimages/curry_leaf.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1058,7 +1140,11 @@
                             <p class="product-price" style="color: #218118de;">₹200/-100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #218118de;" onclick="redirectToWhatsApp('Mint Leaves')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Mint Leaves', 200, 'images_naithika/products_new/mint.webp')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1096,7 +1182,11 @@
                             <p class="product-price" style="color: #218118de;">₹180/- 100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #218118de;" onclick="redirectToWhatsApp('Coriander (Cilantro)')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Coriander (Cilantro)', 180, 'images_naithika/products_new/coriander.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1141,7 +1231,11 @@
                             <p class="product-price"  style="color: #df2727;">₹180/- (200g)</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #df2727;" onclick="redirectToWhatsApp('Mango Pickle')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Mango Pickle', 180, 'images_naithika/products/mango pickle.webp')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1180,7 +1274,11 @@
                             <p class="product-price" style="color: #df2727;">₹180/- (200g)</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #df2727;" onclick="redirectToWhatsApp('Amla Pickle')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Amla Pickle', 180, 'images_naithika/products/Indian gooseberry.webp')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1219,7 +1317,11 @@
                             <p class="product-price" style="color: #df2727;">₹180/- (200g)</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #df2727;" onclick="redirectToWhatsApp('Tomato Pickle')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Tomato Pickle', 180, 'images_naithika/products/Tomato Pickle.webp')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1258,7 +1360,11 @@
                             <p class="product-price" style="color: #df2727;">₹180/- (200g)</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #df2727;" onclick="redirectToWhatsApp('Red Chilli Pickle')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Red Chilli Pickle', 180, 'images_naithika/products/Red Chilli Pickle.webp')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1297,7 +1403,11 @@
                             <p class="product-price" style="color: #df2727;">₹180/- (200g)</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #df2727;" onclick="redirectToWhatsApp('Ginger Pickle')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Ginger Pickle', 180, 'images_naithika/products/Ginger pickle.webp')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1336,7 +1446,11 @@
                             <p class="product-price" style="color: #df2727;">₹180 (200g)</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #df2727;" onclick="redirectToWhatsApp('Lemon Pickle')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Lemon Pickle', 180, 'images_naithika/products/Lemon Pickle.webp')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1375,7 +1489,11 @@
                             <p class="product-price" style="color: #df2727;">₹200/100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #df2727;" onclick="redirectToWhatsApp('Tomato Powder')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Tomato Powder', 200, 'images_naithika/products/Tomato Powder.webp')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1416,7 +1534,11 @@
                             <p class="product-price" style="color: #df2727;">₹150/- (200g)</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #df2727;"onclick="redirectToWhatsApp('Garlic Powder')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Garlic Powder', 150, 'realimages/garlic.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1457,8 +1579,12 @@
                             </div>
                             <p class="product-price" style="color: #df2727;">₹150/- (200g)</p>
                         </div>
-                        <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #df2727;" onclick="redirectToWhatsApp('Moringa Podi')">Buy Now</button>
+                        <div class="product-buy-button-container"><button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Moringa Podi', 150, 'images_naithika/products/Moringa Podi.webp')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
+
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1497,7 +1623,11 @@
                             <p class="product-price" style="color: #df2727;">₹150/- (200g)</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #df2727;" onclick="redirectToWhatsApp('Nuvvula Podi (Sesame Spice)')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Nuvvula Podi (Sesame Spice)', 150, 'images_naithika/products/Nuvvula Podi.webp')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1535,7 +1665,11 @@
                             <p class="product-price" style="color: #df2727;">₹120/- (200g)</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #df2727;" onclick="redirectToWhatsApp('Curry Patta Podi (Curry Leaf Powder)')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Curry Patta Podi (Curry Leaf Powder)', 120, 'realimages/curry_patta_podi.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1573,7 +1707,11 @@
                             <p class="product-price" style="color: #df2727;">₹120/- (200g)</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" style="background-color: #df2727;" onclick="redirectToWhatsApp('Idli Podi (Milagai Podi)')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Idli Podi (Milagai Podi)', 120, 'realimages/idli_podi.jpeg')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1618,7 +1756,11 @@
                             <p class="product-price">₹250/100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" onclick="redirectToWhatsApp('Mango')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Moringa Tea', 250, 'images_naithika/herbal_tea/Moringa.png')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1651,7 +1793,11 @@
                             <p class="product-price">₹250/100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" onclick="redirectToWhatsApp('Chikku (Sapota)')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Lemon & Ginger Tea', 250, 'images_naithika/herbal_tea/Lemon & Ginger Tea.png')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1683,7 +1829,11 @@
                             <p class="product-price">₹280/100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" onclick="redirectToWhatsApp('Jamun')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Amla–Beetroot Tea', 280, 'images_naithika/herbal_tea/Amla Beetroot Tea.png')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1715,7 +1865,11 @@
                             <p class="product-price">₹250/100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" onclick="redirectToWhatsApp('Pineapple')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Mint Green Tea', 250, 'images_naithika/herbal_tea/Mint Green Tea.png')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
@@ -1747,7 +1901,11 @@
                             <p class="product-price">₹250/100g</p>
                         </div>
                         <div class="product-buy-button-container">
-                            <button class="product-buy-button product-front-buy-button" onclick="redirectToWhatsApp('Apple')">Buy Now</button>
+                            <button class="product-buy-button product-front-buy-button"
+                            onclick="addToCart('Ashwagandha Green Tea', 250, 'images_naithika/herbal_tea/Ashwagandha Green.png')"
+                            style="background-color: #e97b06;">
+                            Buy Now
+                            </button>
                         </div>
                     </div>
                     <div class="product-card-back">
